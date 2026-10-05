@@ -3,11 +3,13 @@
 CAD for Flora, the Raspberry Pi 5 desk voice companion. This is the hardware side: real
 electronics modelled at real size, ready to design an enclosure around.
 
-Current state: **parts library only.** Nothing is placed or enclosed yet.
+Current state: **parts library plus a first enclosure concept**, awaiting review. See
+`FLORA_SPEC.md`. No print files have been exported.
 
 ```
 Blender/FLORA_v1.blend      the model (Blender 5.1)
 Blender/reference/          bench photos, vendor CAD sources, notes
+FLORA_SPEC.md               the v1 enclosure concept: layout, print parts, open questions
 ```
 
 Read `Blender/reference/README.md` before using the bench photos: the X1200 UPS HAT in them
