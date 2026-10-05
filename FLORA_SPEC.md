@@ -25,7 +25,9 @@ Print parts are in `FLORA FLAT PRINT PARTS`, linked copies of the electronics in
 The bench layout, boxed: the speakers lie flat with their drivers up, one on each side, and
 the Pi sits between them. A low white tray 188 x 118 mm, 27.4 mm tall at the wings, plan
 corners R6.4. Down the middle runs a raised spine, 100 mm wide and 46 mm tall, standing on a
-purple collar band. The NeoPixel halo and the lux window are on top of the spine, toward
+purple collar band. The spine and collar have the same R6.4 plan corners as the tray and
+deck (inside corners R4, so the wall stays 2.4); the spine's top edge has a 2.5 mm 45 degree
+chamfer that follows them. The NeoPixel halo and the lux window are on top of the spine, toward
 the front. Each wing has two groups of five slots over its speaker.
 
 Axes: X = width (right = +X), Y = depth (front = -Y), Z up, base on z = 0.
