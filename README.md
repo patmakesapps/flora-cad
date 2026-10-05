@@ -20,6 +20,7 @@ is not part of the real build.
   a little black is fine. Flora lives with plants, and white stands out against the green.
 - **Sensors:** soil moisture, light, temperature and humidity, all on one I2C bus through the
   5-port hub.
+- **Speakers:** held with zip ties and/or glue. No screw mounts needed.
 - **Power:** no X1200 UPS HAT in the real build.
 - **Placement:** not decided yet.
 
