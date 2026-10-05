@@ -11,7 +11,9 @@ collection is excluded from the view layer (tick its checkbox in the outliner to
 
 The Lumalien L mark is parked beside them in `LOGOS`, not yet used.
 
-**Nothing has been exported.** No STL or STEP files exist yet.
+STL files for the flat console's ten printed parts are in `STL/`, in millimetres, each
+turned to its print orientation and sitting on z = 0 (exported 2026-10-05). Re-export after
+any model change. The tall pod has not been exported. Hardware per part: `HARDWARE.md`.
 
 # Flat console (2026-10-05)
 
@@ -43,8 +45,8 @@ Axes: X = width (right = +X), Y = depth (front = -Y), Z up, base on z = 0.
 | L logo | recess in the spine top, rear half, x -13.4..20.4, y 10.7..48, 1.8 deep | where Pat placed the mark. Pocket is the logo outline + 0.15 all round; the top is thickened underneath so the floor stays 2.4. Purple inlay glued in |
 | Lettering | "FLORA" on the tray front face, cap height 9, 54 wide, centred at z 18, above the slot; "LUMALIEN" on the spine top under the L mark, cap height 6.5, 59 wide, centred at (3.4, 4.4) | custom wide single-weight font drawn for this (A without a crossbar; O, R, U round-cornered). FLORA: pocket 1.2 deep, stroke 1.3, with purple inlay letters 1.0 thick, 0.1 smaller all round. LUMALIEN: pocket 1.0 deep, stroke 0.94, with purple inlay letters 0.8 thick, only 0.05 smaller all round so their strokes are 0.84 (two lines from a 0.4 nozzle) |
 | Lux window | spine top at (-33, -24.5) | plugs in from inside. Now a cup: 0.4 mm face, 6.5 mm clear bore, so clear filament stays see-through. Can also be left out (open hole) |
-| Spine fixing | 2 x M3 x 30 up through the base posts at (+/-42, -50.5) into inserts in the spine | no screws visible from the top. A skirt under the spine drops through the collar and deck and locates all three |
-| Vents | wings: 20 slots in the deck; front: 1 slot at z 10 (tray) and 1 at z 39 (spine); rear: intake 2 slots at z 15, 21 (tray), exhaust 2 slots at z 39 (spine) | all slots 34 x 2.4 with round ends |
+| Spine fixing | front: 2 x M3 x 30 up through the base posts at (+/-42, -50.5) into inserts in the spine. Rear: 2 x M3 x 6 through the tray's rear wall at x -17 and x 40, z 19.5, into inserts in two tabs that hang from the spine behind the wall | no screws visible from the top or front; the rear two show on the back, heads in 1 mm recesses. A skirt under the spine drops through the collar and deck and locates all three |
+| Vents | wings: 20 slots in the deck; front: 1 slot at z 10 (tray) and 1 at z 39 (spine); rear: intake 2 slots at z 15, 21, centred at x 5 (tray), exhaust 2 slots at z 39 (spine) | all slots 34 x 2.4 with round ends |
 
 ## Print parts (10)
 
@@ -56,7 +58,7 @@ Axes: X = width (right = +X), Y = depth (front = -Y), Z up, base on z = 0.
 | FLAT_BASE | 188 x 118 x 27.2 | white | upright |
 | FLAT_DECK | 188 x 118 x 5.4 (2.4 plate + lip) | white | upside down, top face on the bed |
 | FLAT_COLLAR | 100 x 118 x 3 | purple | flat |
-| FLAT_SPINE | 100 x 118 x 20.8 | white | upside down, top face on the bed |
+| FLAT_SPINE | 100 x 118 x 31.5 (over the rear tabs) | white | upside down, top face on the bed |
 | FLAT_HALO_LENS, FLAT_HALO_RETAINER | as the tall pod | | same meshes as the tall pod's |
 | FLAT_LUX_WINDOW | dia 13.7 x 3.4, 0.4 face | clear | small face down on a smooth plate |
 
@@ -66,9 +68,13 @@ retainer are shared. The lux window has the same outside shape but is hollowed o
 
 ## Hardware
 
-- Heat-set inserts: 9 x M2, 4 x M2.5, 2 x M3 (same hole sizes as the tall pod).
-- Screws: 9 x M2x5, 4 x M2.5x6, 2 x M3x30.
-- 4 x 10 mm stick-on feet (recessed).
+- Heat-set inserts: 9 x M2, 4 x M2.5, 4 x M3 (same hole sizes as the tall pod).
+- Screws: 9 x M2x5, 4 x M2.5x6, 2 x M3x30, 2 x M3x6.
+- 4 x 12.7 mm x 3.5 mm stick-on bumper feet (Bumper Specialties BS01) in recesses dia 13.1,
+  0.6 deep.
+- On hand (Pat, 2026-10-05): Dianrui M2-M6 insert kit, which has the three outer diameters
+  the holes are sized for (M2 3.2, M2.5 3.5, M3 5.0); M2x5 button screws; M3 button screw
+  kit up to 30 mm. Not on hand: M2.5 screws for the Pi.
 
 ## Assembly order
 
@@ -94,7 +100,8 @@ retainer are shared. The lux window has the same outside shape but is hollowed o
   thing inside: estimated top at z 37 plus the wire bend, under a ceiling at z 43.6.
 - Speaker leads have to reach the HAT's JST from the front end of each speaker: not routed.
 - The deck's outer edges are held only by the lip fit; the spine clamps its inner edges.
-- The rear of the spine is located by its skirt but not screwed down.
+- Speakers are to be glued or zip-tied down (Pat, 2026-10-05); nothing in the model holds
+  them for shipping.
 - The step inside the spine wall (1.4 mm, at z 36) prints as a small unsupported ledge.
 - Cooling: less vent area than the tall pod's first version, no fan, HAT over the CPU.
 - Microphones face up under the spine top; the front spine slot is their path to the room.

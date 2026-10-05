@@ -4,10 +4,11 @@ CAD for Flora, the Raspberry Pi 5 desk voice companion. This is the hardware sid
 electronics modelled at real size, ready to design an enclosure around.
 
 Current state: **parts library plus two enclosure concepts** (a flat console, shown, and a
-tall pod kept as backup), awaiting review. See `FLORA_SPEC.md`. No print files have been
-exported.
+tall pod kept as backup). See `FLORA_SPEC.md`. STL files exist for the flat console only.
 
 ```
+STL/                        print files for the flat console, in print orientation, mm
+HARDWARE.md                 inserts and screws for each printed part
 Blender/FLORA_v1.blend      the model (Blender 5.1)
 Blender/reference/          bench photos, vendor CAD sources, notes
 FLORA_SPEC.md               the enclosure concepts: layout, print parts, open questions
