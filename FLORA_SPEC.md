@@ -36,28 +36,33 @@ Axes: X = width (right = +X), Y = depth (front = -Y), Z up, base on z = 0.
 | Pi 5 + audio HAT | flat on 4 mm bosses, board x -41.5..43.5, y -1.5..54.5, underside z 6.4 | USB-C / HDMI edge 0.5 from the rear wall, SD end toward +X, USB / Ethernet toward -X. M2.5 inserts |
 | USB-C power | rear wall opening 14.6 x 8.6 at x 32.3, z 9.4 | sized for the plug overmold |
 | SHT41 | floor, front left, x -32..-6.6, y -53..-35.2 | 3 mm bosses: 2 x M2 inserts + 2 pins. Behind the front slot |
-| QT hub | floor, front right, x 6.6..32, y -53..-35.2 | same mounting |
-| Soil cable | open notch 8.5 x 4.2 in the bottom edge of the spine's rear wall, at x 32 | the cable lies in as the spine goes on, then runs over the Pi to the hub |
+| QT hub | hangs upside down under the spine top at the rear, x 12..37.4, y 30.5..48.3, board at z 37.2..38.8, connectors pointing down | 2 x M2 inserts + 2 pins on bosses under the top. Moved here from the front floor so the soil cable reaches: 9.5 clear above the HAT |
+| Soil cable | open notch 8.5 x 4.2 in the bottom edge of the spine's rear wall, at x 32 | about 28 mm of the 200 mm cable is inside. Modelled as `FLAT \| Soil cable 4424 \| 200 mm`: 166 mm to where the sensor stands, 34 spare |
 | NeoPixel ring | spine top, centre (0, -24.5), LEDs up | same lens, retainer and 3 x M2 as the tall pod |
 | VEML7700 | spine top, window at (-33, -24.5) | same window and mounting as the tall pod |
 | L logo | recess in the spine top, rear half, x -13.4..20.4, y 10.7..48, 1.8 deep | where Pat placed the mark. Pocket is the logo outline + 0.15 all round; the top is thickened underneath so the floor stays 2.4. Purple inlay glued in |
+| Lettering | "FLORA" on the tray front face, cap height 9, 54 wide, centred at z 18, above the slot; "LUMALIEN" on the spine top under the L mark, cap height 6.5, 59 wide, centred at (3.4, 4.4) | custom wide single-weight font drawn for this (A without a crossbar; O, R, U round-cornered). FLORA: pocket 1.2 deep, stroke 1.3, with purple inlay letters 1.0 thick, 0.1 smaller all round. LUMALIEN: pocket 1.0 deep, stroke 0.94, with purple inlay letters 0.8 thick, only 0.05 smaller all round so their strokes are 0.84 (two lines from a 0.4 nozzle) |
+| Lux window | spine top at (-33, -24.5) | plugs in from inside. Now a cup: 0.4 mm face, 6.5 mm clear bore, so clear filament stays see-through. Can also be left out (open hole) |
 | Spine fixing | 2 x M3 x 30 up through the base posts at (+/-42, -50.5) into inserts in the spine | no screws visible from the top. A skirt under the spine drops through the collar and deck and locates all three |
 | Vents | wings: 20 slots in the deck; front: 1 slot at z 10 (tray) and 1 at z 39 (spine); rear: intake 2 slots at z 15, 21 (tray), exhaust 2 slots at z 39 (spine) | all slots 34 x 2.4 with round ends |
 
-## Print parts (8)
+## Print parts (10)
 
 | Part | Size | Colour | Orientation |
 |---|---|---|---|
 | FLAT_LOGO_INLAY | 33.2 x 36.8 x 1.5, two pieces (L and triangle) | purple | flat |
+| FLAT_FLORA_INLAY | 5 letters, 8.8 tall x 1.0 thick, strokes 1.1 | purple | flat |
+| FLAT_LUMALIEN_INLAY | 8 letters, 6.4 tall x 0.8 thick, strokes 0.84 | purple | flat |
 | FLAT_BASE | 188 x 118 x 27.2 | white | upright |
 | FLAT_DECK | 188 x 118 x 5.4 (2.4 plate + lip) | white | upside down, top face on the bed |
 | FLAT_COLLAR | 100 x 118 x 3 | purple | flat |
 | FLAT_SPINE | 100 x 118 x 20.8 | white | upside down, top face on the bed |
-| FLAT_HALO_LENS, FLAT_HALO_RETAINER, FLAT_LUX_WINDOW | as the tall pod | | same meshes as the tall pod's |
+| FLAT_HALO_LENS, FLAT_HALO_RETAINER | as the tall pod | | same meshes as the tall pod's |
+| FLAT_LUX_WINDOW | dia 13.7 x 3.4, 0.4 face | clear | small face down on a smooth plate |
 
 Walls, floor and top 2.4 mm. Everything fits the Bambu A1. The ring and lux mounting under
-the spine top is the tall pod cap's, cut out and reused, so those three small parts are
-shared.
+the spine top is the tall pod cap's, cut out and reused, so the lens and
+retainer are shared. The lux window has the same outside shape but is hollowed out.
 
 ## Hardware
 
@@ -67,12 +72,12 @@ shared.
 
 ## Assembly order
 
-1. Set the inserts: 8 in the base, 5 in the spine top, 2 in the spine posts.
-2. SHT41 and hub onto the floor, then the Pi with the HAT. Speakers down either side.
-3. Plug in the speaker lead and the hub cables.
+1. Set the inserts: 6 in the base, 7 in the spine top, 2 in the spine posts.
+2. SHT41 onto the floor, then the Pi with the HAT. Speakers down either side.
+3. Plug in the speaker lead.
 4. Deck on. Collar on.
-5. In the spine: lens, ring, retainer; lux window, lux board. Plug in the ring jumpers and
-   the lux cable.
+5. In the spine: lens, ring, retainer; lux window, lux board; hub. Plug the ring jumpers
+   into the HAT, and the lux, SHT41, Pi and soil cables into the hub.
 6. Lay the soil cable in the rear notch, lower the spine, two screws from underneath.
 
 ## Checked
@@ -83,7 +88,9 @@ shared.
 
 ## Not checked, or guessed
 
-- Cables and plugs are not modelled. The jumper sockets on the HAT header are the tallest
+- Only the soil cable is modelled. With the hub in the spine, four cables tie the spine to
+  the base while it is being closed.
+- Other cables and plugs are not modelled. The jumper sockets on the HAT header are the tallest
   thing inside: estimated top at z 37 plus the wire bend, under a ceiling at z 43.6.
 - Speaker leads have to reach the HAT's JST from the front end of each speaker: not routed.
 - The deck's outer edges are held only by the lip fit; the spine clamps its inner edges.
