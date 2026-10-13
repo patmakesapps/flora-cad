@@ -96,3 +96,9 @@ Hole positions are board-local, from the datum corner.
 STEP files were tessellated with OpenCascade (`cadquery-ocp`) at 0.05 mm / 0.5 rad into one
 merged vertex and face list with a per-face colour, then built as a single mesh. Each board
 is 4,000 to 12,000 triangles. No build scripts are kept in this repo, on purpose.
+
+## License
+
+[MIT](LICENSE). This covers the model, the STL files and the docs. The vendor CAD in
+`Blender/reference/vendor_cad/` is Adafruit's and keeps its own license
+(`LICENSE-Adafruit_CAD_Parts.txt`).
