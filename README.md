@@ -1,5 +1,7 @@
 # flora-cad
 
+![FLORA beside a potted plant, its halo ring lit purple](photos/flora-desk.jpg)
+
 CAD for Flora, the Raspberry Pi 5 desk voice companion. This is the hardware side: real
 electronics modelled at real size, ready to design an enclosure around.
 
@@ -8,11 +10,17 @@ tall pod kept as backup). See `FLORA_SPEC.md`. STL files exist for the flat cons
 
 ```
 STL/                        print files for the flat console, in print orientation, mm
+BOM.md                      everything to buy: electronics, cables, hardware, filament
 HARDWARE.md                 inserts and screws for each printed part
 Blender/FLORA_v1.blend      the model (Blender 5.1)
 Blender/reference/          bench photos, vendor CAD sources, notes
 FLORA_SPEC.md               the enclosure concepts: layout, print parts, open questions
 ```
+
+The software that runs on the Pi is in [FLORA](https://github.com/patmakesapps/FLORA).
+Project page: [lumalien.com/flora](https://www.lumalien.com/flora).
+
+![The FLORA console up close: the Lumalien mark and the lit halo](photos/flora-halo.jpg)
 
 Read `Blender/reference/README.md` before using the bench photos: the X1200 UPS HAT in them
 is not part of the real build.
